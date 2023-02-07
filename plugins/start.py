@@ -22,11 +22,11 @@ botid = token.split(':')[0]
 currentTime = datetime.datetime.now()
 
 if currentTime.hour < 12:
-	wish = "Good morning."
+	wish = "Good Morning."
 elif 12 <= currentTime.hour < 12:
-	wish = 'Good afternoon.'
+	wish = 'Good Afternoon.'
 else:
-	wish = 'Good evening.'
+	wish = 'Good Evening.'
 
 #-------------------------------
 
@@ -37,9 +37,9 @@ async def start(client,message):
 	    id = message.text.split(' ')[1]
 	except:
 	    await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Hello 👋 {wish} {message.from_user.first_name},\n\n
+	__I Am File Rename Bot, Please Sent Me Any Telegram 
+	**Document Or Video** And Enter New Filename To Rename It__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
@@ -50,13 +50,14 @@ async def start(client,message):
 	        try:
 	            await client.send_message(id,"Your Frind Alredy Using Our Bot")
 	            await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Hello 👋 {wish} {message.from_user.first_name},\n\n
+	__I Am File Rename Bot, Please Sent Me Any Telegram 
+	**Document Or Video** And Enter New Filename To Rename It__
 	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	reply_markup=InlineKeyboardMarkup([[
+	   InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") 
+           ],[ 
+           InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
 	        except:
 	             return
 	    else:
@@ -66,13 +67,14 @@ async def start(client,message):
 	         new_limit = limit + 104857600
 	         uploadlimit(int(id),new_limit)
 	         await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Hello 👋 {wish} {message.from_user.first_name},\n\n
+	__I Am File Rename Bot, Please Sent Me Any Telegram 
+	**Document Or Video** And Enter New Filename To Rename It__
 	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	reply_markup=InlineKeyboardMarkup([[
+	   InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") 
+           ],[
+           InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
 	         
 
 
@@ -88,7 +90,7 @@ async def send_doc(client,message):
        		await message.reply_text("**__You are not subscribed my channel__** ",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		[ [ InlineKeyboardButton("🔔 SUBSCRIBE 🔔" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        try:
            bot_data = find_one(int(botid))
