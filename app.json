@@ -1,23 +1,22 @@
-
 {
 
-    "name": "Renamer Bot",
+    "name": "Rename Bot",
 
-    "description": "Telegram File Renamer Bot 4GB ",
+    "description": "File Rename Bot With 4GB Files Support",
 
     "keywords": [
 
-        "Renamer ",
+        "Rename",
 
         "4GB File",
 
-        "telegram"
+        "Telegram"
 
     ],
 
-    "repository": "https://github.com/lntechnical2/RENAMER_BOT_V3",
+    "repository": "https://github.com/pr0fess0r99/RENAME-BOT-V3",
 
-    "success_url": "https://telegram.dog/lntechnical",
+    "success_url": "https://telegram.dog/TechProjectsUpdates",
 
     "env": {
 
