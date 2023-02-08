@@ -10,4 +10,4 @@ async def start(client,message):
 	data = find_one(int(botid))
 	total_rename = data["total_rename"]
 	total_size = data["total_size"]
-	await message.reply_text(f"Total User:- {total_user()}\n🤖 Bot Name: Rename Bot\n👨‍💻 Developer: @pr0fess0r99\n㊗️ Language: Python3\n🛠️ Library: Pyrogram 2.0\n📡 Server: Heroku\n📝 Total Renamed File :-{total_rename}\n💾 Total Size Renamed :- {humanbytes(int(total_size))} ",quote=True)
+	await message.reply_text(f"👥 Total Users:- {total_user()}\n🤖 Bot Name: Rename Bot\n👨‍💻 Developer: @pr0fess0r99\n㊗️ Language: Python3\n🛠️ Library: Pyrogram 2.0\n📡 Server: Heroku\n📝 Total Renamed File :-{total_rename}\n💾 Total Size Renamed :- {humanbytes(int(total_size))} ",quote=True)
