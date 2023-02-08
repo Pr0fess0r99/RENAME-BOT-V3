@@ -18,8 +18,8 @@ async def upgrade(bot,update):
 
 	UPI 🆔 Details
 
-        Google pay 📲 ```joynathnet4@oksbi```
-        Phonepe 📲 ```bijoy.nath@ybl```
+        Google pay 📲 joynathnet4@oksbi
+        Phonepe 📲 bijoy.nath@ybl
 	
 	After Payment Send Screenshots Of 
         Payment To Admin"""
@@ -45,8 +45,8 @@ async def upgradecm(bot,message):
 
 	UPI 🆔 Details
 
-        Google pay 📲 ```joynathnet4@oksbi```
-        Phonepe 📲 ```bijoy.nath@ybl```
+        Google pay 📲 joynathnet4@oksbi
+        Phonepe 📲 bijoy.nath@ybl
 	
 	After Payment Send Screenshots Of 
         Payment To Admin"""
