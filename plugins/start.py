@@ -25,7 +25,7 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
-	    await message.reply_text(text =f"""Hello 🙋‍♂ {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
+	    await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
 	reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
@@ -37,7 +37,7 @@ async def start(client,message):
 	    if old == True:
 	        try:
 	            await client.send_message(id,"Your Friend Already Using Our Bot")
-	            await message.reply_text(text =f"""Hello 🙋‍♂ {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",    
+	            await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",    
         reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
@@ -52,7 +52,7 @@ async def start(client,message):
 	         limit = _user_["uploadlimit"]
 	         new_limit = limit + 104857600
 	         uploadlimit(int(id),new_limit)
-	         await message.reply_text(text =f"""Hello 🙋‍♂ {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
+	         await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
 	reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
