@@ -32,8 +32,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats")
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates") ]  ]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
 	    return
 	if id:
 	    if old == True:
@@ -46,8 +46,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats")
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates") ]  ]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
 	        except:
 	             return
 	    else:
@@ -63,8 +63,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats")
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates") ]  ]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
 	         
 
 
