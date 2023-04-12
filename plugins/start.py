@@ -30,8 +30,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/TamilRockerz_TR"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/Kali_Official")]]))
 	    return
 	if id:
 	    if old == True:
@@ -42,8 +42,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/TamilRockerz_TR"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/Kali_Official")]]))
 	        except:
 	             return
 	    else:
@@ -57,8 +57,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/TamilRockerz_TR"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/Kali_Official")]]))
 	         
 
 
