@@ -28,7 +28,7 @@ async def start(client,message):
 	    await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
 	reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
-	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
+	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
            InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
            InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
@@ -40,7 +40,7 @@ async def start(client,message):
 	            await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",    
         reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
-	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
+	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
            InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
            InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
@@ -55,7 +55,7 @@ async def start(client,message):
 	         await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
 	reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
-	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
+	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
            InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
            InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
