@@ -30,8 +30,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/viizet"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/viizet")]]))
+           InlineKeyboardButton("🔗 Admin", url="https://t.me/viizet"),
+           InlineKeyboardButton("📢 Admin", url="https://t.me/viizet")]]))
 	    return
 	if id:
 	    if old == True:
@@ -57,8 +57,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/viizet"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/viizet")]]))
+           InlineKeyboardButton("🔗 Admin", url="https://t.me/viizet"),
+           InlineKeyboardButton("📢 Admin", url="https://t.me/viizet")]]))
 	         
 
 
