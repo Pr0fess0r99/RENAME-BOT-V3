@@ -5,25 +5,24 @@ from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
-async def fix_thumb(thumb):
+async def fix_thumb_path(thumb_path):
     width = 0
     height = 0
     try:
-        if thumb != None:
-            metadata = extractMetadata(createParser(thumb))
+        if thumb_path != None:
+            metadata = extractMetadata(createParser(thumb_path))
             if metadata.has("width"):
                 width = metadata.get("width")
             if metadata.has("height"):
                 height = metadata.get("height")
-                Image.open(thumb).convert("RGB").save(thumb)
-                img = Image.open(thumb)
-                img.resize((320, height))
-                img.save(thumb, "JPEG")
+                Image. open (thumb_path). convert ("RGB") . save (thumb_path)
+img = Image.open (thumb_path)
+img. resize((320, height)) img. save (thumb_path, "JPEG") return thumb_path
     except Exception as e:
         print(e)
-        thumb = None 
+        thumb_path = None 
        
-    return width, height, thumb
+    return width, height, thumb_path
     
 async def take_screen_shot(video_file, output_directory, ttl):
     out_put_file_name = f"{output_directory}/{time.time()}.jpg"
