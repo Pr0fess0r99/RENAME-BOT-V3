@@ -6,8 +6,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
 async def fix_thumb(thumb):
-    width = 0
-    height = 0
+    width = 739
+    height = 415
     try:
         if thumb != None:
             metadata = extractMetadata(createParser(thumb))
