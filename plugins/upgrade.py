@@ -10,21 +10,21 @@ async def upgrade(bot,update):
 	
 	**VIP 1 ** 
 	Daily Upload  Limit 10GB
-	Price Rs 55  🇮🇳/🌎 0.67$  per Month
+	Price  🇸🇴 0.67$  per Month
 	
 	**VIP 2 **
 	Daily Upload Limit 50GB
-	Price Rs 80  🇮🇳/🌎 0.97$  per Month
+	Price 🇸🇴 0.97$  per Month
 
 	UPI 🆔 Details
 
-        Google pay 📲 joynathnet4@oksbi
-        Phonepe 📲 bijoy.nath@ybl
+        Contect 📲 tg user @Viizet
+        Phone.  📲 no phone
 	
 	After Payment Send Screenshots Of 
         Payment To Admin"""
 	keybord = InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("👮 Admin", url = "https://t.me/pr0fess0r99")], 
+        			InlineKeyboardButton("👮 Admin", url = "https://t.me/Viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
 	await update.message.edit(text = text,reply_markup = keybord)
 	
