@@ -1,6 +1,5 @@
 import math
 import time
-from helper.txt import mr
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
