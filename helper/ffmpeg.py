@@ -17,7 +17,7 @@ async def fix_thumb(thumb):
                 height = metadata.get("height")
                 Image.open(thumb).convert("RGB").save(thumb)
                 img = Image.open(thumb)
-                img.resize((320, height))
+                img.resize((415, 739))
                 img.save(thumb, "JPEG")
     except Exception as e:
         print(e)
