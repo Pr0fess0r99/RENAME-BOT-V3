@@ -40,7 +40,7 @@ async def rename(bot,update):
 	chat_id = update.message.chat.id
 	id = update.message.reply_to_message_id
 	await update.message.delete()
-	await update.message.reply_text(f"Please Enter The New Filename\nOr Copy Paste Old File Name\n\n✍️ Note:- .mp4 Extension is required",reply_to_message_id = id,
+	await update.message.reply_text(f"Please Enter The New Filename\n\n✍️ Note: Extension Not Required",reply_to_message_id = id,
 	reply_markup=ForceReply(True) )
 	dateupdate(chat_id,date)
 	
@@ -88,18 +88,12 @@ async def doc(bot,update):
      else:
         caption = f"**{new_filename}**"
      if thumb:
-        ph_path = await bot.download_media(thumb)
-        Image.open(ph_path).convert("RGB").save(ph_path)
-        img = Image.open(ph_path)
-        img.resize((320, 320))
-        img.save(ph_path, "JPEG")
-        # ... [existing code] ...
-    else:
-        # Generate a default thumbnail if none is provided
-        ph_path = "default_thumb.jpg"  # Path to a default thumbnail image
-        img = Image.new('RGB', (320, 320), color = (73, 109, 137))  # Or generate a simple one
-        img.save(ph_path, "JPEG")
-
+     		ph_path = await bot.download_media(thumb)
+     		Image.open(ph_path).convert("RGB").save(ph_path)
+     		img = Image.open(ph_path)
+     		img.resize((320, 320))
+     		img.save(ph_path, "JPEG")
+     		c_time = time.time()
      		
      else:
      		ph_path = None
@@ -191,18 +185,12 @@ async def vid(bot,update):
      else:
         caption = f"**{new_filename}**"
      if thumb:
-        ph_path = await bot.download_media(thumb)
-        Image.open(ph_path).convert("RGB").save(ph_path)
-        img = Image.open(ph_path)
-        img.resize((320, 320))
-        img.save(ph_path, "JPEG")
-        # ... [existing code] ...
-    else:
-        # Generate a default thumbnail if none is provided
-        ph_path = "default_thumb.jpg"  # Path to a default thumbnail image
-        img = Image.new('RGB', (320, 320), color = (73, 109, 137))  # Or generate a simple one
-        img.save(ph_path, "JPEG")
-
+     		ph_path = await bot.download_media(thumb)
+     		Image.open(ph_path).convert("RGB").save(ph_path)
+     		img = Image.open(ph_path)
+     		img.resize((320, 320))
+     		img.save(ph_path, "JPEG")
+     		c_time = time.time()
      		
      else:
      		try:
@@ -294,18 +282,11 @@ async def aud(bot,update):
         caption = f"**{new_filename}**"
         
      if thumb:
-        ph_path = await bot.download_media(thumb)
-        Image.open(ph_path).convert("RGB").save(ph_path)
-        img = Image.open(ph_path)
-        img.resize((320, 320))
-        img.save(ph_path, "JPEG")
-        # ... [existing code] ...
-    else:
-        # Generate a default thumbnail if none is provided
-        ph_path = "default_thumb.jpg"  # Path to a default thumbnail image
-        img = Image.new('RGB', (320, 320), color = (73, 109, 137))  # Or generate a simple one
-        img.save(ph_path, "JPEG")
-
+     		ph_path = await bot.download_media(thumb)
+     		Image.open(ph_path).convert("RGB").save(ph_path)
+     		img = Image.open(ph_path)
+     		img.resize((320, 320))
+     		img.save(ph_path, "JPEG")
      		await ms.edit("```Trying To Upload...```")
      		c_time = time.time()
      		try:
