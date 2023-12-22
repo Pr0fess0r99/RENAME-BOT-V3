@@ -18,12 +18,12 @@ async def fix_thumb(thumb):
 
                     # Maintain aspect ratio
                     aspect_ratio = height / width
-                    new_height = int(320 * aspect_ratio)
+                    new_height = int(415 * aspect_ratio)
 
-                    img = img.resize((320, new_height))
+                    img = img.resize((415, new_height))
                     img.save(thumb, "JPEG")
 
-                return 320, new_height, thumb
+                return 415, new_height, thumb
     except Exception as e:
         print(f"Error in fix_thumb: {e}")
     
