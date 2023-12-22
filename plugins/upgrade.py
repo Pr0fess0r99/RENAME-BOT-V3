@@ -18,11 +18,11 @@ async def upgrade(bot,update):
 
 	UPI 🆔 Details
 
-        Contect 📲 tg @VIIZET
-        Phone.  📲 no phone
+        Contect 📲 Tg @VIIZET
+        Phone.  📲 Waafi
 	
 	After Payment Send Screenshots Of 
-        Payment To Admin"""
+        Payment To Admin"@VIIZET"
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/Viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
