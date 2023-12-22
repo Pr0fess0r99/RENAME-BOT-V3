@@ -6,24 +6,28 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
 async def fix_thumb(thumb):
-    width = 320
-    height = int(width / 16 * 9)
     try:
-        if thumb != None:
+        if thumb is not None:
             metadata = extractMetadata(createParser(thumb))
-            if metadata.has("width"):
+            if metadata and metadata.has("width") and metadata.has("height"):
                 width = metadata.get("width")
-            if metadata.has("height"):
                 height = metadata.get("height")
-                Image.open(thumb).convert("RGB").save(thumb)
-                img = Image.open(thumb)
-                img.resize((width, height))
-                img.save(thumb, "JPEG")
+
+                with Image.open(thumb) as img:
+                    img.convert("RGB").save(thumb, "JPEG")
+
+                    # Maintain aspect ratio
+                    aspect_ratio = height / width
+                    new_height = int(320 * aspect_ratio)
+
+                    img = img.resize((320, new_height))
+                    img.save(thumb, "JPEG")
+
+                return 320, new_height, thumb
     except Exception as e:
-        print(e)
-        thumb = None 
-       
-    return width, height, thumb
+        print(f"Error in fix_thumb: {e}")
+    
+    return None, None, None
     
 async def take_screen_shot(video_file, output_directory, ttl):
     out_put_file_name = f"{output_directory}/{time.time()}.jpg"
@@ -43,8 +47,8 @@ async def take_screen_shot(video_file, output_directory, ttl):
         stderr=asyncio.subprocess.PIPE,
     )
     stdout, stderr = await process.communicate()
-    e_response = stderr.decode().strip()
-    t_response = stdout.decode().strip()
+    if stderr:
+        print(f"Error in take_screen_shot: {stderr.decode().strip()}")
     if os.path.lexists(out_put_file_name):
         return out_put_file_name
     return None
