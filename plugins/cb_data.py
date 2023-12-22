@@ -40,7 +40,7 @@ async def rename(bot,update):
 	chat_id = update.message.chat.id
 	id = update.message.reply_to_message_id
 	await update.message.delete()
-	await update.message.reply_text(f"Please Enter The New Filename\n\n✍️ Note: Extension Not Required",reply_to_message_id = id,
+	await update.message.reply_text(f"Please Enter The New Filename\n🔸Or Copy Paste Old File Name\n\n✍️ Note: Extension Not Required",reply_to_message_id = id,
 	reply_markup=ForceReply(True) )
 	dateupdate(chat_id,date)
 	
@@ -91,7 +91,7 @@ async def doc(bot,update):
      		ph_path = await bot.download_media(thumb)
      		Image.open(ph_path).convert("RGB").save(ph_path)
      		img = Image.open(ph_path)
-     		img.resize((320, 415))
+     		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
      		c_time = time.time()
      		
@@ -188,7 +188,7 @@ async def vid(bot,update):
      		ph_path = await bot.download_media(thumb)
      		Image.open(ph_path).convert("RGB").save(ph_path)
      		img = Image.open(ph_path)
-     		img.resize((320, 415))
+     		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
      		c_time = time.time()
      		
@@ -285,7 +285,7 @@ async def aud(bot,update):
      		ph_path = await bot.download_media(thumb)
      		Image.open(ph_path).convert("RGB").save(ph_path)
      		img = Image.open(ph_path)
-     		img.resize((320, 415))
+     		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
      		await ms.edit("```Trying To Upload...```")
      		c_time = time.time()
