@@ -12,12 +12,13 @@
 #
 #  License can be found in < https://github.com/vasusen-code/VIDEOconvertor/blob/public/LICENSE> .
 
-import os, time, subprocess, asyncio
+import time
+import os
+import asyncio
+from PIL import Image
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
 
-from datetime import datetime as dt
-from telethon import events
-from ethon.telefunc import fast_download
-from ethon.pyfunc import video_metadata
 
 def hhmmss(seconds):
     x = time.strftime('%H:%M:%S',time.gmtime(seconds))
