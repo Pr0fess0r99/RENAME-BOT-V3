@@ -40,7 +40,7 @@ async def rename(bot,update):
 	chat_id = update.message.chat.id
 	id = update.message.reply_to_message_id
 	await update.message.delete()
-	await update.message.reply_text(f"Please Enter The New Filename\nOr Copy 
+	await update.message.reply_text(f"Please Enter The New Filename\🔺nOr Copy 
 Paste Old File Name\n\n✍️ ✍️ Note:- .mp4 Extension is required",reply_to_message_id = id,
 	reply_markup=ForceReply(True) )
 	dateupdate(chat_id,date)
