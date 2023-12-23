@@ -104,7 +104,7 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"```Sorry So Please Wait For ⏰ {ltime}```",reply_to_message_id = message.id)
+       	await message.reply_text(f"```Sorry Dude I Am Not Only For YOU \nFlood Control Is Active ☑️ So Please Wait For {ltime}```",reply_to_message_id = message.id)
        else:
        		# Forward a single message
            	await client.forward_messages(log_channel, message.from_user.id, message.id)
