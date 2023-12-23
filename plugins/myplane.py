@@ -1,6 +1,7 @@
 import time
 from pyrogram import Client, filters
-from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup, ForceReply)
+from pyrogram.types import (
+    InlineKeyboardButton, InlineKeyboardMarkup, ForceReply)
 from helper.database import find_one, used_limit
 from helper.database import daily as daily_
 import datetime
@@ -32,7 +33,7 @@ async def start(client, message):
     if ends:
         pre_check = check_expi(ends)
         if pre_check == False:
-            uploadlimit(message.from_user.id, 6442450944)  # Set limit to 6 GB
+            uploadlimit(message.from_user.id, 6 * 1024 * 1024 * 1024)  # Set limit to 6 GB
             usertype(message.from_user.id, "Free")
     if ends == None:
         text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaily Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}"
