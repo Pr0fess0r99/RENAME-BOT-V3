@@ -6,30 +6,23 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
 async def fix_thumb(thumb):
-    target_height = 739
-    target_width = 415
-
+    width = 0
+    height = 0
     try:
-        if thumb is not None:
-            # Open the image and convert it to RGB
-            img = Image.open(thumb).convert("RGB")
-            width, height = img.size
-
-            # Calculate new width to maintain aspect ratio
-            aspect_ratio = width / height
-            new_width = int(target_height * aspect_ratio)
-
-            # Resize and save the image
-            img = img.resize((new_width, target_height))
-            img.save(thumb, "JPEG")
-
-            # Update width and height variables
-            width, height = new_width, target_height
+        if thumb != None:
+            metadata = extractMetadata(createParser(thumb))
+            if metadata.has("width"):
+                width = metadata.get("width")
+            if metadata.has("height"):
+                height = metadata.get("height")
+                Image.open(thumb).convert("RGB").save(thumb)
+                img = Image.open(thumb)
+                img.resize((320, height))
+                img.save(thumb, "JPEG")
     except Exception as e:
         print(e)
-        thumb = None
-        width, height = 0, 0
-
+        thumb = None 
+       
     return width, height, thumb
     
 async def take_screen_shot(video_file, output_directory, ttl):
