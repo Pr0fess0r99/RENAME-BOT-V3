@@ -24,7 +24,7 @@ async def upgrade(bot,update):
         Payment To Admin @viizet"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/Viizet")], 
-        			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
+        			[InlineKeyboardButton("Cancel ", callback_data = "cancel")  ]])
 	await update.message.edit(text = text,reply_markup = keybord)
 	
 
