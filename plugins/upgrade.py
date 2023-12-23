@@ -19,7 +19,7 @@ async def upgrade(bot,update):
 	UPI 🆔 Details
 
         Contect 📲 Tg @VIIZET
-        Phone.  📲 Waafi
+        Phone.  📲 WAAFI
 	
 	After Payment Send Screenshots Of 
         Payment To Admin"""
@@ -46,7 +46,7 @@ async def upgradecm(bot,message):
 	UPI 🆔 Details
 
         Contect 📲 tg @VIIZET
-        Phone.  📲 no phone
+        Phone.  📲 WAAFI
 	
 	After Payment Send Screenshots Of 
         Payment To Admin"""
