@@ -9,19 +9,24 @@ async def upgrade(bot,update):
 	Daily Upload Limit 2GB
 	Price 0
 	
- **🪙 VIP 1 🪙** 
-Daily  Upload  limit 10GB
-Price Evc 0.5   So /🌎 0.8$  per Month
+
+	**🪙 Silver Tier 🪙** 
+	Daily  Upload  limit 10GB
+	Price Rs 66  ind /🌎 0.8$  per Month
 	
- **💎 VIP 2 💎**
-Daily Upload Limit 50GB
-Price Evc 1.0  So /🌎 1.2$  per Month
-
-
-Pay Using Upi I'd ```Waafi 616655126```
-       	
+	**💫 Gold Tier 💫**
+	Daily Upload limit 50GB
+	Price Rs 100  ind /🌎 1.2$  per Month
+	
+	**💎 Diamond 💎**
+	Daily Upload limit 100GB
+	Price Rs 206  ind /🌎 2.5$  per Month
+	
+	
+	Pay Using Upi I'd ```7808912076@paytm```
+	
 	After Payment Send Screenshots Of 
-        Payment To Admin @Viizet"""
+        Payment To Admin @mRiderDM"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/Viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
@@ -34,19 +39,24 @@ async def upgradecm(bot,message):
 	Daily Upload Limit 2GB
 	Price 0
 	
-	        **🪙 Silver Tier 🪙** 
-        Daily Upload  Limit 10GB
-        Price Evc 0.5   So /🌎 0.8$  per Month
+	        
+	**🪙 Silver Tier 🪙** 
+	Daily  Upload  limit 10GB
+	Price Rs 66  ind /🌎 0.8$  per Month
 	
-	**💎 VIP 2 💎**
-        Daily Upload Limit 50GB
-        Price Evc 1.0  So /🌎 1.2$  per Mont
-
-
-	Pay Using Upi I'd ```Waafi 616655126```
-       	
+	**💫 Gold Tier 💫**
+	Daily Upload limit 50GB
+	Price Rs 100  ind /🌎 1.2$  per Month
+	
+	**💎 Diamond 💎**
+	Daily Upload limit 100GB
+	Price Rs 206  ind /🌎 2.5$  per Month
+	
+	
+	Pay Using Upi I'd ```7808912076@paytm```
+	
 	After Payment Send Screenshots Of 
-        Payment To Admin @Viizet"""
+        Payment To Admin @mRiderDM"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
