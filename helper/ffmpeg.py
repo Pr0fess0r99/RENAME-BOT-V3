@@ -5,20 +5,19 @@ from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
-async def fix_thumb(thumb):
-    width = 0
-    height = 0
-    try:
-        if thumb != None:
-            metadata = extractMetadata(createParser(thumb))
-            if metadata.has("width"):
-                width = metadata.get("width")
-            if metadata.has("height"):
-                height = metadata.get("height")
-                Image.open(thumb).convert("RGB").save(thumb)
-                img = Image.open(thumb)
-                img.resize((320, height))
-                img.save(thumb, "JPEG")
+
+async def fix_thumbnail(thumb_path: str, height: int = 0):
+    if not height:
+        metadata = extractMetadata(createParser(thumb_path))
+        if metadata.has("height"):
+            height = metadata.get("height")
+        else:
+            height = 0
+    Image.open(thumb_path).convert("RGB").save(thumb_path)
+    img = Image.open(thumb_path)
+    img.resize((320, height))
+    img.save(thumb_path, "JPEG")
+    return thumb_path
     except Exception as e:
         print(e)
         thumb = None 
