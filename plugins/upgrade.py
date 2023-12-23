@@ -54,5 +54,5 @@ async def upgradecm(bot,message):
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
-	await update.message.edit(text = text,reply_markup = keybord)
+	await message.reply_text(text = text,reply_markup = keybord)
 	
