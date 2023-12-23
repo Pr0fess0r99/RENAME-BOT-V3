@@ -157,7 +157,7 @@ async def send_doc(client,message):
        		    fileid = file.file_id
        		    total_rename(int(botid),prrename)
        		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""**What Do You Want Me To Do With This File ?**\n\n**◈ File Name :-** {filename}\n**◈ File Size :-** {filesize}\n**◈ Dc ID :-** {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
+       		    await message.reply_text(f"""**🗂️ What Do You Want Me To Do With This File ?**\n\n**◈ File Name :-** {filename}\n**◈ File Size :-** {filesize}\n**◈ Dc ID :-** {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
        		[[ InlineKeyboardButton("❎ Cancel ",callback_data = "cancel"),
        		InlineKeyboardButton("Rename 📝",callback_data = "rename")  ]]))
        		
