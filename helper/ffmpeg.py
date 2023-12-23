@@ -4,28 +4,32 @@ import asyncio
 from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
+from typing import Optional
 
 
-async def fix_thumbnail(thumb_path: str, height: int = 0):
-    if not height:
-        metadata = extractMetadata(createParser(thumb_path))
-        if metadata.has("height"):
-            height = metadata.get("height")
-        else:
-            height = 0
-    Image.open(thumb_path).convert("RGB").save(thumb_path)
-    img = Image.open(thumb_path)
-    img.resize((320, height))
-    img.save(thumb_path, "JPEG")
-    return thumb_path
-    except Exception as e:
-        print(e)
-        thumb = None 
-       
-    return width, height, thumb
-    
-async def take_screen_shot(video_file, output_directory, ttl):
-    out_put_file_name = f"{output_directory}/{time.time()}.jpg"
+# (c) @AbirHasan2005
+
+
+
+
+
+async def take_screen_shot(video_file, output_directory, ttl) -> Optional[str]:
+    """
+    Take Screenshot from Video.
+
+    Source: https://stackoverflow.com/a/13891070/4723940
+
+    :param video_file: Pass Video File Path.
+    :param output_directory: Pass output folder path for screenshot. If folders not exists, this will create folders.
+    :param ttl: Time!
+
+    :return: This will return screenshot image path.
+    """
+
+    output_dir = f'{output_directory}/{time.time()}/'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    output_filepath = output_dir + "thumbnail.jpg"
     file_genertor_command = [
         "ffmpeg",
         "-ss",
@@ -34,16 +38,17 @@ async def take_screen_shot(video_file, output_directory, ttl):
         video_file,
         "-vframes",
         "1",
-        out_put_file_name
+        output_filepath
     ]
+    # width = "90"
     process = await asyncio.create_subprocess_exec(
         *file_genertor_command,
+        # stdout must a pipe to be accessible as process.stdout
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
+    # Wait for the subprocess to finish
     stdout, stderr = await process.communicate()
     e_response = stderr.decode().strip()
     t_response = stdout.decode().strip()
-    if os.path.lexists(out_put_file_name):
-        return out_put_file_name
-    return None
+    return output_filepath if os.path.lexists(output_filepath) else None
