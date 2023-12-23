@@ -18,10 +18,10 @@ async def upgrade(bot,update):
         Price Evc 1.0  So /🌎 1.2$  per Mont
 
 
-	Pay Using Upi I'd ```7808912076@paytm```
+	Pay Using Upi I'd ```Waafi 616655126```
        	
 	After Payment Send Screenshots Of 
-        Payment To Admin"""
+        Payment To Admin @Viizet"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/Viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
