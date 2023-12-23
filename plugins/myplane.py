@@ -31,7 +31,7 @@ async def start(client,message):
 	if ends:
 	    pre_check = check_expi(ends)
 	    if pre_check == False:
-	        uploadlimit(message.from_user.id,2147483648)
+	        uploadlimit(message.from_user.id,6442450944)
 	        usertype(message.from_user.id,"Free")
 	if ends == None:
 	    text = f"**🆔 User ID:** ```{message.from_user.id}```\n**👤 Plan:** {user}\n**📤 Daily Upload Limit:** {humanbytes(limit)}\n**⏳ Today Used:** {humanbytes(used)}\n**⌛ Remain:** {humanbytes(remain)}"
