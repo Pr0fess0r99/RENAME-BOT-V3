@@ -5,26 +5,21 @@ from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
-async def fix_thumb(thumb):
-    width = 0
-    height = 0
+async def fix_thumb(thumb, new_width=415, new_height=739):
     try:
-        if thumb != None:
-            metadata = extractMetadata(createParser(thumb))
-            if metadata.has("width"):
-                width = metadata.get("width")
-            if metadata.has("height"):
-                height = metadata.get("height")
-                Image.open(thumb).convert("RGB").save(thumb)
-                img = Image.open(thumb)
-                img.resize((320, height))
-                img.save(thumb, "JPEG")
+        if thumb is not None:
+            # Open the image and convert it to RGB
+            img = Image.open(thumb).convert("RGB")
+            # Resize the image to the new dimensions
+            img = img.resize((new_width, new_height))
+            # Save the resized image
+            img.save(thumb, "JPEG")
     except Exception as e:
         print(e)
-        thumb = None 
-       
-    return width, height, thumb
-    
+        thumb = None
+
+    return new_width, new_height, thumb
+
 async def take_screen_shot(video_file, output_directory, ttl):
     out_put_file_name = f"{output_directory}/{time.time()}.jpg"
     file_genertor_command = [
@@ -46,5 +41,6 @@ async def take_screen_shot(video_file, output_directory, ttl):
     e_response = stderr.decode().strip()
     t_response = stdout.decode().strip()
     if os.path.lexists(out_put_file_name):
+        await fix_thumb(out_put_file_name)  # Call fix_thumb to resize
         return out_put_file_name
     return None
