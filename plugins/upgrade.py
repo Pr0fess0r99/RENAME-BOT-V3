@@ -34,21 +34,19 @@ async def upgradecm(bot,message):
 	Daily Upload Limit 2GB
 	Price 0
 	
-	**VIP 1 ** 
-	Daily Upload  Limit 10GB
-	Price  🇸🇴 0.67$  per Month
+	**🪙 VIP 1 🪙 **
+        Daily Upload  Limit 10GB
+        Price Evc 0.5   So /🌎 0.8$  per Month
 	
-	**VIP 2 **
-	Daily Upload Limit 50GB
-	Price  🇸🇴 0.97$  per Month
+	**💎 VIP 2 💎**
+        Daily Upload Limit 50GB
+        Price Evc 1.0  So /🌎 1.2$  per Mont
 
-	UPI 🆔 Details
 
-        Contect 📲 tg @VIIZET
-        Phone.  📲 WAAFI
-	
+	Pay Using Upi I'd ```Waafi 616655126```
+       	
 	After Payment Send Screenshots Of 
-        Payment To Admin"""
+        Payment To Admin @Viizet"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
