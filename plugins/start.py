@@ -30,8 +30,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/fpdrama"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/fpdrama")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/File_Renamernotchat"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/File_Renamernot")]]))
 	    return
 	if id:
 	    if old == True:
@@ -42,8 +42,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/fpdrama"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/fpdrama")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/File_Renamernotchat"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/File_Renamernot")]]))
 	        except:
 	             return
 	    else:
@@ -57,8 +57,8 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup([[
 	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/fpdrama"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/fprama")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/File_Renamernotchat"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/File_Renamernot")]]))
 	         
 
 
@@ -104,7 +104,7 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"```Sorry Dude I Am Not Only For YOU 🤗\nFlood Control Is Active ☑️ So Please Wait For ⏰ {ltime}```",reply_to_message_id = message.id)
+       	await message.reply_text(f"```Sorry So Please Wait For ⏰ {ltime}```",reply_to_message_id = message.id)
        else:
        		# Forward a single message
            		
@@ -125,7 +125,7 @@ async def send_doc(client,message):
        			used_limit(message.from_user.id,0)			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Sorry! I Can't Upload Files That Are Larger Than {humanbytes(limit)}. File Size Detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want To Rename Large File Upgrade Your Plan",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰",callback_data = "upgrade") ]]))
+       		    await message.reply_text(f"Sorry! I Can't Upload Files That Are Larger Than {humanbytes(limit)}. File Size Detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want To Rename Large File Upgrade Your Plan",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("💰Upgrade 💰",callback_data = "upgrade") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
