@@ -10,12 +10,12 @@ async def upgrade(bot,update):
 	Price 0
 	
 	**🪙 VIP 1 🪙 **
-        Daily Upload  Limit 10GB
-        Price Evc 0.5   So /🌎 0.8$  per Month
+ Daily Upload  Limit 10GB
+ Price Evc 0.5   So /🌎 0.8$  per Month
 	
-	**💎 VIP 2 💎**
-        Daily Upload Limit 50GB
-        Price Evc 1.0  So /🌎 1.2$  per Mont
+	**💎 VIP 2 💎**       
+Daily Upload Limit 50GB
+Price Evc 1.0  So /🌎 1.2$  per Mont
 
 
 	Pay Using Upi I'd ```Waafi 616655126```
