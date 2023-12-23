@@ -7,26 +7,21 @@ from pyrogram import Client , filters
 async def upgrade(bot,update):
 	text = """**Free Plan User**
 	Daily Upload Limit 2GB
-	Price 0
-	
+	Price 0	
 
-	**🪙 Silver Tier 🪙** 
+	**🪙 VIP 1 🪙** 
 	Daily  Upload  limit 10GB
-	Price Rs 66  ind /🌎 0.8$  per Month
+	Price Evc 0.5   So /🌎 0.8$  per Month
 	
-	**💫 Gold Tier 💫**
+	**💫 VIP 2 💫**
 	Daily Upload limit 50GB
-	Price Rs 100  ind /🌎 1.2$  per Month
-	
-	**💎 Diamond 💎**
-	Daily Upload limit 100GB
-	Price Rs 206  ind /🌎 2.5$  per Month
-	
-	
-	Pay Using Upi I'd ```7808912076@paytm```
+	Price Evc 1.0  So /🌎 1.2$  per Month
+
+		
+	Pay Using Upi I'd ```Waafi 252616655126```
 	
 	After Payment Send Screenshots Of 
-        Payment To Admin @mRiderDM"""
+        Payment To Admin @viizet"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/Viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
@@ -40,23 +35,19 @@ async def upgradecm(bot,message):
 	Price 0
 	
 	        
-	**🪙 Silver Tier 🪙** 
+	**🪙 VIP 1 🪙** 
 	Daily  Upload  limit 10GB
-	Price Rs 66  ind /🌎 0.8$  per Month
+	Price Evc 0.5   So /🌎 0.8$  per Month
 	
-	**💫 Gold Tier 💫**
+	**💫 VIP 2 💫**
 	Daily Upload limit 50GB
-	Price Rs 100  ind /🌎 1.2$  per Month
-	
-	**💎 Diamond 💎**
-	Daily Upload limit 100GB
-	Price Rs 206  ind /🌎 2.5$  per Month
-	
-	
-	Pay Using Upi I'd ```7808912076@paytm```
+	Price Evc 1.0  So /🌎 1.2$  per Month
+
+		
+	Pay Using Upi I'd ```Waafi 252616655126```
 	
 	After Payment Send Screenshots Of 
-        Payment To Admin @mRiderDM"""
+        Payment To Admin @viizet"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("👮 Admin", url = "https://t.me/viizet")], 
         			[InlineKeyboardButton("Cancel ✖️", callback_data = "cancel")  ]])
