@@ -4,7 +4,7 @@ import asyncio
 from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from typing import Optional
+
 
 
 # (c) @AbirHasan2005
