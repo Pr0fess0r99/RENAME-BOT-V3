@@ -7,6 +7,7 @@ from hachoir.parser import createParser
 
 async def fix_thumb(thumb):
     target_height = 739
+    target_width = 415
 
     try:
         if thumb is not None:
