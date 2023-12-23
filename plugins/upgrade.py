@@ -34,7 +34,7 @@ async def upgradecm(bot,message):
 	Daily Upload Limit 2GB
 	Price 0
 	
-	**🪙 VIP 1 🪙 **
+	        **🪙 Silver Tier 🪙** 
         Daily Upload  Limit 10GB
         Price Evc 0.5   So /🌎 0.8$  per Month
 	
