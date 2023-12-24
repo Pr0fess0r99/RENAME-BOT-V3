@@ -28,10 +28,10 @@ async def start(client,message):
 	    await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
 	reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
-	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
+	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/File_Renamernotchat"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/File_Renamernot")]]))
 	    return
 	if id:
 	    if old == True:
@@ -40,10 +40,10 @@ async def start(client,message):
 	            await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",    
         reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
-	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
+	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/File_Renamernotchat"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/File_Renamernot")]]))
 	        except:
 	             return
 	    else:
@@ -55,10 +55,10 @@ async def start(client,message):
 	         await message.reply_text(text =f"""Hello 👋 {message.from_user.first_name},\n\nI'm File Rename Bot, Please Sent Me Any Telegram Document Or Video And Enter New Filename To Rename It.""",
 	reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup([[
-	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/pr0fess0r99") 
+	   InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/viizet") 
            ],[
-           InlineKeyboardButton("🔗 Support", url="https://t.me/TechProjectsChats"),
-           InlineKeyboardButton("📢 Updates", url="https://t.me/TechProjectsUpdates")]]))
+           InlineKeyboardButton("🔗 Support", url="https://t.me/File_Renamernotchat"),
+           InlineKeyboardButton("📢 Updates", url="https://t.me/File_Renamernot")]]))
 	         
 
 
@@ -104,15 +104,16 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"```Sorry Dude I Am Not Only For YOU 🤗\nFlood Control Is Active ☑️ So Please Wait For ⏰ {ltime}```",reply_to_message_id = message.id)
+       	await message.reply_text(f"```Sorry Dude I Am Not Only For YOU \n Flood Control Is Active  So Please Wait For {ltime}```",reply_to_message_id = message.id)
        else:
        		# Forward a single message
-           		
+           	 
+	       
        		media = await client.get_messages(message.chat.id,message.id)
        		file = media.document or media.video or media.audio 
        		dcid = FileId.decode(file.file_id).dc_id
        		filename = file.file_name
-       		value = 2147483648
+       		value = 6442450944
        		used_ = find_one(message.from_user.id)
        		used = used_["used_limit"]
        		limit = used_["uploadlimit"]
@@ -125,7 +126,7 @@ async def send_doc(client,message):
        			used_limit(message.from_user.id,0)			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Sorry! I Can't Upload Files That Are Larger Than {humanbytes(limit)}. File Size Detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want To Rename Large File Upgrade Your Plan",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰",callback_data = "upgrade") ]]))
+       		    await message.reply_text(f"Sorry! I Can't Upload Files That Are Larger Than {humanbytes(limit)}. File Size Detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want To Rename Large File Upgrade Your Plan",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("💰Upgrade 💰",callback_data = "upgrade") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
@@ -138,7 +139,7 @@ async def send_doc(client,message):
        		            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
-       		            uploadlimit(message.from_user.id,2147483648)
+       		            uploadlimit(message.from_user.id,6442450944)
        		            usertype(message.from_user.id,"Free")
 	
        		            await message.reply_text(f'Your Plane Expired On 📅 {buy_date}',quote=True)
@@ -150,14 +151,14 @@ async def send_doc(client,message):
        		    if buy_date:
        		        pre_check = check_expi(buy_date)
        		        if pre_check == False:
-       		            uploadlimit(message.from_user.id,2147483648)
+       		            uploadlimit(message.from_user.id,6442450944)
        		            usertype(message.from_user.id,"Free")
        		        
        		    filesize = humanize.naturalsize(file.file_size)
        		    fileid = file.file_id
        		    total_rename(int(botid),prrename)
        		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
-       		[[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),
-       		InlineKeyboardButton("Cancel ❎",callback_data = "cancel")  ]]))
+       		    await message.reply_text(f"""**🗂️ What Do You Want Me To Do With This File ?**\n\n**◈ File Name :-** {filename}\n**◈ File Size :-** {filesize}\n**◈ Dc ID :-** {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
+       		[[ InlineKeyboardButton("❎ Cancel ",callback_data = "cancel"),
+       		InlineKeyboardButton("Rename 📝",callback_data = "rename")  ]]))
        		
