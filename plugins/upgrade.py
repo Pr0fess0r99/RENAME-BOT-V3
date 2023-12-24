@@ -11,15 +11,15 @@ async def upgrade(bot,update):
 
 	**🪙 Silver Tier 🪙** 
 	Daily  Upload  limit 10GB
-	Price Rs 66  ind /🌎 0.8$  per Month
+	Price Evc 0.5   So /🌎 0.8$  per Month
 	
 	**💫 Gold Tier 💫**
 	Daily Upload limit 50GB
-	Price Rs 100  ind /🌎 1.2$  per Month
+	Price Evc 1.0  So /🌎 1.2$  per Month
 	
 	**💎 Diamond 💎**
 	Daily Upload limit 100GB
-	Price Rs 206  ind /🌎 2.5$  per Month
+	Price Evc 1.5  So /🌎 2.0$  per Month
 	
 
 		
@@ -42,15 +42,15 @@ async def upgradecm(bot,message):
 	        
 	**🪙 Silver Tier 🪙** 
 	Daily  Upload  limit 10GB
-	Price Rs 66  ind /🌎 0.8$  per Month
+	Price Evc 0.5   So /🌎 0.8$  per Month
 	
 	**💫 Gold Tier 💫**
 	Daily Upload limit 50GB
-	Price Rs 100  ind /🌎 1.2$  per Month
+	Price Evc 1.0  So /🌎 1.2$  per Month
 	
 	**💎 Diamond 💎**
 	Daily Upload limit 100GB
-	Price Rs 206  ind /🌎 2.5$  per Month
+	Price Evc 1.5  So /🌎 2.0$  per Month
 	
 
 		
