@@ -125,5 +125,5 @@ async def dft(bot,update):
 	uploadlimit(int(user_id), 1288490188)
 	usertype(int(user_id),"**Free**")
 	addpre(int(user_id))
-	await update.message.edit("Daily Data limit has been reset successsfully.\nThis account has default 1.2 GB renaming capacity ")
+	await update.message.edit("Daily Data limit has been reset successsfully.\nThis account has default 2 GB renaming capacity ")
 	await bot.send_message(user_id,"Your Daily Data limit has been reset successsfully.\n\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/File_Renamernot'>**viizet**</a>")
