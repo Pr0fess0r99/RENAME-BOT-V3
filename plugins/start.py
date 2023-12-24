@@ -109,56 +109,46 @@ async def send_doc(client,message):
        		# Forward a single message
            	 
 	       
-       		media = await client.get_messages(message.chat.id,message.id)
-       		file = media.document or media.video or media.audio 
-       		dcid = FileId.decode(file.file_id).dc_id
-       		filename = file.file_name
-       		value = 6442450944
-       		used_ = find_one(message.from_user.id)
-       		used = used_["used_limit"]
-       		limit = used_["uploadlimit"]
-       		expi = daily - int(time.mktime(time.strptime(str(date_.today()), '%Y-%m-%d')))
-       		if expi != 0:
-       			today = date_.today()
-       			pattern = '%Y-%m-%d'
-       			epcho = int(time.mktime(time.strptime(str(today), pattern)))
-       			daily_(message.from_user.id,epcho)
-       			used_limit(message.from_user.id,0)			     		
-       		remain = limit- used
-       		if remain < int(file.file_size):
-       		    await message.reply_text(f"Sorry! I Can't Upload Files That Are Larger Than {humanbytes(limit)}. File Size Detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want To Rename Large File Upgrade Your Plan",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("💰Upgrade 💰",callback_data = "upgrade") ]]))
-       		    return
-       		if value < file.file_size:
-       		    if STRING:
-       		        if buy_date==None:
-       		            await message.reply_text(f"You Can't Upload More Then {humanbytes(limit)} Used Daly Limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰",callback_data = "upgrade") ]]))
-       		            return
-       		        pre_check = check_expi(buy_date)
-       		        if pre_check == True:
-       		            await message.reply_text(f"""What Do You Want Me To Do With This File ?\n**File Name**: {filename}\n**File Size**: {humanize.naturalsize(file.file_size)}\n**Dc ID**: {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
-       		            total_rename(int(botid),prrename)
-       		            total_size(int(botid),prsize,file.file_size)
-       		        else:
-       		            uploadlimit(message.from_user.id,6442450944)
-       		            usertype(message.from_user.id,"Free")
-	
-       		            await message.reply_text(f'Your Plane Expired On 📅 {buy_date}',quote=True)
-       		            return
-       		    else:
-       		          	await message.reply_text("You Can't Upload File Bigger Than 2GB")
-       		          	return
-       		else:
-       		    if buy_date:
-       		        pre_check = check_expi(buy_date)
-       		        if pre_check == False:
-       		            uploadlimit(message.from_user.id,6442450944)
-       		            usertype(message.from_user.id,"Free")
-       		        
-       		    filesize = humanize.naturalsize(file.file_size)
-       		    fileid = file.file_id
-       		    total_rename(int(botid),prrename)
-       		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""**🗂️ What Do You Want Me To Do With This File ?**\n\n**◈ File Name :-** {filename}\n**◈ File Size :-** {filesize}\n**◈ Dc ID :-** {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
-       		[[ InlineKeyboardButton("❎ Cancel ",callback_data = "cancel"),
-       		InlineKeyboardButton("Rename 📝",callback_data = "rename")  ]]))
-       		
+       		from datetime import date as date_
+import time
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+# ... (assuming other necessary imports and setup are already done)
+
+# Your code for processing a message
+media = await client.get_messages(message.chat.id, message.id)
+file = media.document or media.video or media.audio
+dcid = FileId.decode(file.file_id).dc_id
+filename = file.file_name
+
+# Set your daily limit to 6GB
+daily_limit = 6 * 1024 * 1024 * 1024  # 6 GB in bytes
+
+# Fetch user's usage data
+used_ = find_one(message.from_user.id)
+used = used_["used_limit"]
+
+# Calculate time difference for reset (I'm assuming this part of your code does that)
+expi = daily - int(time.mktime(time.strptime(str(date_.today()), '%Y-%m-%d')))
+if expi != 0:
+    today = date_.today()
+    pattern = '%Y-%m-%d'
+    epcho = int(time.mktime(time.strptime(str(today), pattern)))
+    daily_(message.from_user.id, epcho)
+    used_limit(message.from_user.id, 0)
+
+# Calculate remaining limit
+remain = daily_limit - used
+
+# Check if remaining limit is less than the file size
+if remain < int(file.file_size):
+    await message.reply_text(
+        f"Sorry! Daily limit exceeded. Your limit is {humanbytes(daily_limit)}. "
+        f"File size is {humanbytes(file.file_size)}. "
+        f"Used daily limit {humanbytes(used)}. "
+        "Upgrade your plan to upload larger files.",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💰 Upgrade 💰", callback_data="upgrade")]])
+    )
+    return
+
+# ... (rest of your code for processing the upload)
