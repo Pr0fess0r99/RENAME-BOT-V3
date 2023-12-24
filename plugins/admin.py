@@ -93,7 +93,7 @@ async def cp1(bot,update):
 	usertype(int(user_id),"**ACCOUNT DOWNGRADED**")
 	addpre(int(user_id))
 	await update.message.edit("ACCOUNT DOWNGRADED\nThe user can only use 500MB/day from Data qota")
-	await bot.send_message(user_id,"**⚠️ Warning ⚠️**\n\n- ACCOUNT DOWNGRADED\nYou can only use 500MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await bot.send_message(user_id,"**⚠️ Warning ⚠️**\n\n- ACCOUNT DOWNGRADED\nYou can only use 500MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/File_Renamernot'>**Viizet**</a>")
 
 @Client.on_callback_query(filters.regex('cp2'))
 async def cp2(bot,update):
@@ -104,7 +104,7 @@ async def cp2(bot,update):
 	usertype(int(user_id),"**ACCOUNT DOWNGRADED Lv-2**")
 	addpre(int(user_id))
 	await update.message.edit("ACCOUNT DOWNGRADED \nThe user can only use 100MB/day from Data qota")
-	await bot.send_message(user_id,"**⛔️ Last Warning ⛔️**\n\n- ACCOUNT DOWNGRADED \nYou can only use 100MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await bot.send_message(user_id,"**⛔️ Last Warning ⛔️**\n\n- ACCOUNT DOWNGRADED \nYou can only use 100MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/File_Renamernot'>**Viizet**</a>")
 
 @Client.on_callback_query(filters.regex('cp3'))
 async def cp3(bot,update):
@@ -115,7 +115,7 @@ async def cp3(bot,update):
 	usertype(int(user_id),"**POWER CEASED !**")
 	addpre(int(user_id))
 	await update.message.edit("All power ceased from the user.\nThis account has 0 mb renaming capacity ")
-	await bot.send_message(user_id,"🚫 All POWER CEASED 🚫\n\n- All power has been ceased from you \nFrom now you can't rename files using me\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await bot.send_message(user_id,"🚫 All POWER CEASED 🚫\n\n- All power has been ceased from you \nFrom now you can't rename files using me\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/File_Renamernot'>**Viizet**</a>")
 
 @Client.on_callback_query(filters.regex('dft'))
 async def dft(bot,update):
@@ -126,4 +126,4 @@ async def dft(bot,update):
 	usertype(int(user_id),"**Free**")
 	addpre(int(user_id))
 	await update.message.edit("Daily Data limit has been reset successsfully.\nThis account has default 1.2 GB renaming capacity ")
-	await bot.send_message(user_id,"Your Daily Data limit has been reset successsfully.\n\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/viizet'>**viizet**</a>")
+	await bot.send_message(user_id,"Your Daily Data limit has been reset successsfully.\n\nCheck your plan here - /myplan\n- Contact Admin <a href='https://t.me/File_Renamernot'>**viizet**</a>")
