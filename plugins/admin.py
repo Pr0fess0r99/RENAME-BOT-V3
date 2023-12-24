@@ -12,7 +12,7 @@ async def warn(c, m):
             try:
                 user_id = m.text.split(' ', 2)[1]
                 reason = m.text.split(' ', 2)[2]
-                await m.reply_text("User Notfied Sucessfully ✅")
+                await m.reply_text("User Notfied Sucessfully ☑️")
                 await c.send_message(chat_id=int(user_id), text=reason)
             except:
                  await m.reply_text("User Not Notfied Sucessfully 😔") 
