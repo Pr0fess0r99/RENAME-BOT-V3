@@ -9,13 +9,18 @@ async def upgrade(bot,update):
 	Daily Upload Limit 2GB
 	Price 0	
 
-	**🪙 VIP 1 🪙** 
+	**🪙 Silver Tier 🪙** 
 	Daily  Upload  limit 10GB
-	Price Evc 0.5   So /🌎 0.8$  per Month
+	Price Rs 66  ind /🌎 0.8$  per Month
 	
-	**💫 VIP 2 💫**
+	**💫 Gold Tier 💫**
 	Daily Upload limit 50GB
-	Price Evc 1.0  So /🌎 1.2$  per Month
+	Price Rs 100  ind /🌎 1.2$  per Month
+	
+	**💎 Diamond 💎**
+	Daily Upload limit 100GB
+	Price Rs 206  ind /🌎 2.5$  per Month
+	
 
 		
 	Pay Using Upi I'd ```Waafi 252616655126```
@@ -35,13 +40,18 @@ async def upgradecm(bot,message):
 	Price 0
 	
 	        
-	**🪙 VIP 1 🪙** 
+	**🪙 Silver Tier 🪙** 
 	Daily  Upload  limit 10GB
-	Price Evc 0.5   So /🌎 0.8$  per Month
+	Price Rs 66  ind /🌎 0.8$  per Month
 	
-	**💫 VIP 2 💫**
+	**💫 Gold Tier 💫**
 	Daily Upload limit 50GB
-	Price Evc 1.0  So /🌎 1.2$  per Month
+	Price Rs 100  ind /🌎 1.2$  per Month
+	
+	**💎 Diamond 💎**
+	Daily Upload limit 100GB
+	Price Rs 206  ind /🌎 2.5$  per Month
+	
 
 		
 	Pay Using Upi I'd ```Waafi 252616655126```
